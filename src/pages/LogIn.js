@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import Main from "./Main";
 import SignIn from "./SignIn";
@@ -19,6 +20,13 @@ const LogIn = () => {
     console.log("Username: ", username);
     console.log("Password: ", password);
   };
+  const callApi = async () => {
+    axios.get("/api").then((res) => console.log(res.data));
+  };
+
+  useEffect(() => {
+    callApi();
+  }, []);
 
   return (
     <div>

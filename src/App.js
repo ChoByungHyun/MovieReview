@@ -5,6 +5,7 @@ import React, { useEffect, useReducer, useRef } from "react";
 import Login from "./pages/LogIn";
 import Main from "./pages/Main";
 import SignIn from "./pages/SignIn";
+import axios from "axios";
 
 function App() {
   return (
