@@ -7,7 +7,7 @@ import MyHeader from "../components/MyHeader";
 const Main = () => {
   return (
     <div>
-      <MyHeader headText={"영화 리뷰페이d지 입니다."}></MyHeader>
+      <MyHeader headText={"영화 리뷰페이dd지 입니다."}></MyHeader>
     </div>
   );
 };
