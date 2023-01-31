@@ -4,15 +4,9 @@ import { useRecoilState, atom } from "recoil";
 import MovieInfo from "../util/MovieInfo";
 import MyButton from "./MyButton";
 import SearchBar from "./SearchBar";
+import item from "../item.json";
+import { Code } from "../common";
 
-export const selectedTabId = atom({
-  key: "tabId",
-  default: "news",
-});
-export const searchKeyword = atom({
-  key: "keyword",
-  default: "코로나",
-});
 const MovieList = () => {
   const [articles, setArticles] = useState(null);
   const [movies, setMovies] = useState([]);
@@ -36,25 +30,13 @@ const MovieList = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    apiGet(searchTerm);
+    apiGet(query);
+    console.log(Code.Client_ID);
+    console.log(Code.Client_Secret);
   };
-
-  //   useEffect(() => {
-  //     apiGet("바스터즈");
-  //   }, []);
 
   return (
     <div className="listArea">
-      {/* //   <form onSubmit={handleSubmit}>
-    //     <input
-    //       type="text"
-    //       value={searchTerm}
-    //       onChange={(e) => setSearchTerm(e.target.value)}
-    //     />
-    //     <button type="submit">Search</button>
-    //   </form>
-    //   <SearchResults articles={articles} /> */}
-
       <input
         type="text"
         value={query}
