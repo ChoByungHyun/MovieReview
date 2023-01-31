@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useRecoilState, atom } from "recoil";
-
+import { Input, Row, Col } from "antd";
 import MovieInfo from "../util/MovieInfo";
 import MyButton from "./MyButton";
 import SearchBar from "./SearchBar";
 import item from "../item.json";
 import { Code } from "../Common/common";
+const { Search } = Input;
 
 const MovieList = () => {
   const [articles, setArticles] = useState(null);
@@ -31,19 +32,26 @@ const MovieList = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     apiGet(query);
-    console.log(Code.Client_ID);
-    console.log(Code.Client_Secret);
   };
 
   return (
     <div className="listArea">
-      <input
+      <Input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <MyButton text={"검색"} onClick={handleSubmit}></MyButton>
-      <div className="listView">
+      <div className="input_searchbar">
+        <MyButton text={"검색"} onClick={handleSubmit}></MyButton>
+      </div>
+
+      <div
+        className="listView"
+        style={{
+          display: "grid",
+          justifyContent: "center",
+        }}
+      >
         {articles &&
           articles.map((v, inx) => {
             return <MovieInfo key={inx} row={v} />;

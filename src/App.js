@@ -7,6 +7,7 @@ import Main from "./pages/Main";
 import SignIn from "./pages/SignIn";
 import axios from "axios";
 import { Button } from "antd";
+import GirdTest from "./components/GirdTest";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Login />}></Route>
           <Route path="/Main" element={<Main />}></Route>
           <Route path="/SignIn" element={<SignIn />}></Route>
+          <Route path="/GridTest" element={<GirdTest />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

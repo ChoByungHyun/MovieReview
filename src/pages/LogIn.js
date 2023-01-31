@@ -9,10 +9,15 @@ import MyButton from "../components/MyButton";
 import NaverLogin from "../components/NaverLogin";
 import LoginEx from "../components/LoginEx";
 import Form_Login from "../components/Form_Login";
+import { Code } from "../Common/common";
+import SubHeader from "../components/SubHeader";
+import GirdTest from "../components/GirdTest";
 
 const LogIn = () => {
   const navigate = useNavigate();
-  const header = "여기는 로그인페이지";
+  // const header = "영화 검색";
+  // const header = Code.Header_Name;
+  // console.log(header);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -33,9 +38,10 @@ const LogIn = () => {
 
   return (
     <div>
-      <MyHeader headText={header} />
-      <div>어서오세요</div>
+      <MyHeader />
+      {/* <div className="wrapper_Login">로그인 해주세요.</div> */}
       {/* <LoginEx /> */}
+      <SubHeader headText={"로그인 해주세요."} />
       <Form_Login />
       {/* <form onSubmit={handleSubmit}>
         <label>
@@ -73,6 +79,11 @@ const LogIn = () => {
           text={"메인으로"}
           onClick={() => navigate("/Main")}
         ></MyButton>
+        <MyButton
+          text={"연습장"}
+          onClick={() => navigate("/GridTest")}
+        ></MyButton>
+        {/* <GirdTest /> */}
       </div>
     </div>
   );

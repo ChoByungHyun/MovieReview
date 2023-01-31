@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import MyHeader from "../components/MyHeader";
 import MyButton from "../components/MyButton";
+import SubHeader from "../components/SubHeader";
 import NaverLogin from "../components/NaverLogin";
 
 const SignIn = () => {
@@ -25,12 +26,11 @@ const SignIn = () => {
   return (
     <div>
       <MyHeader
-        headText={"회원가입 페이지 입니다."}
         leftChild={
           <MyButton text={"<"} onClick={() => navigate(-1)}></MyButton>
         }
       />
-
+      <SubHeader headText={"회원가입"} />
       <form onSubmit={handleSubmit}>
         <label>
           ID:
