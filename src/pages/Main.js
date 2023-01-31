@@ -10,9 +10,15 @@ import MovieCard from "../components/MovieCard";
 import SearchBar from "../components/SearchBar";
 
 const Main = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <MyHeader headText={"영화 리뷰페이지 입니다."}></MyHeader>
+      <MyHeader
+        headText={"영화 리뷰페이지 입니다."}
+        leftChild={
+          <MyButton text={"<"} onClick={() => navigate(-1)}></MyButton>
+        }
+      ></MyHeader>
       {/* <SearchBar /> */}
       <MovieList />
     </div>

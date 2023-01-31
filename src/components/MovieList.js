@@ -5,7 +5,7 @@ import MovieInfo from "../util/MovieInfo";
 import MyButton from "./MyButton";
 import SearchBar from "./SearchBar";
 import item from "../item.json";
-import { Code } from "../common";
+import { Code } from "../Common/common";
 
 const MovieList = () => {
   const [articles, setArticles] = useState(null);

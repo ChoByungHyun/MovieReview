@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import MyHeader from "../components/MyHeader";
 import MyButton from "../components/MyButton";
+import NaverLogin from "../components/NaverLogin";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const SignIn = () => {
           <MyButton text={"<"} onClick={() => navigate(-1)}></MyButton>
         }
       />
+
       <form onSubmit={handleSubmit}>
         <label>
           ID:

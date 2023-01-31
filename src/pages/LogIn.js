@@ -6,6 +6,9 @@ import Main from "./Main";
 import SignIn from "./SignIn";
 import MyHeader from "../components/MyHeader";
 import MyButton from "../components/MyButton";
+import NaverLogin from "../components/NaverLogin";
+import LoginEx from "../components/LoginEx";
+import Form_Login from "../components/Form_Login";
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -32,7 +35,9 @@ const LogIn = () => {
     <div>
       <MyHeader headText={header} />
       <div>어서오세요</div>
-      <form onSubmit={handleSubmit}>
+      {/* <LoginEx /> */}
+      <Form_Login />
+      {/* <form onSubmit={handleSubmit}>
         <label>
           ID:
           <input
@@ -55,12 +60,20 @@ const LogIn = () => {
           text={"로그인"}
           onClick={() => navigate("/Main")}
         ></MyButton>
-
+        
+        
+      </form> */}
+      <div className="btn_SignIn">
         <MyButton
           text={"회원가입"}
           onClick={() => navigate("/SignIn")}
         ></MyButton>
-      </form>
+        <NaverLogin />
+        <MyButton
+          text={"메인으로"}
+          onClick={() => navigate("/Main")}
+        ></MyButton>
+      </div>
     </div>
   );
 };

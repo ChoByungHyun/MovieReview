@@ -27,11 +27,13 @@ body {
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   /* --vh:100%; */
+
 }
 .App {
   min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
+
 }
 
 /* My Header */
@@ -80,6 +82,19 @@ header .head_btn_left {
   background-color: #ececec;
   color: black;
 }
+
+.btn_SignIn{
+  display: flex;
+}
+.ETC_font{
+    font-family: "Nanum Pen Script";
+}
+element.style {}
+
+.css-dev-only-do-not-override-ixblex.ant-form-item .ant-form-item-label>label{
+    font-family: "Nanum Pen Script";
+}
+
 
 /* movie card */
 /* .movie-card-container {
