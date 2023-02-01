@@ -20,8 +20,6 @@ body {
   .App {
     width: 90vw;
   }
-
-
 }
 #root {
   background-color: white;
@@ -83,7 +81,7 @@ header .head_btn_left {
   color: black;
 }
 
-.btn_SignIn{
+.btn_SignUp{
   display: flex;
 }
 .ETC_font{

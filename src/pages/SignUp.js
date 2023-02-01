@@ -6,7 +6,7 @@ import MyButton from "../components/MyButton";
 import SubHeader from "../components/SubHeader";
 import NaverLogin from "../components/NaverLogin";
 
-const SignIn = () => {
+const SignUp = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -71,4 +71,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
